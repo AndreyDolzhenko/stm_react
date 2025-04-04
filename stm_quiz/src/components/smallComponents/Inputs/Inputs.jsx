@@ -4,7 +4,7 @@ const Inputs = () => {
 
     return (
         <>
-            <p><input className={classes.Inputs} type="text" placeholder="ФИО"></input></p>
+            <p><input className={classes.inputs} type="text" placeholder="ФИО"></input></p>
         </>
     );
 }
