@@ -1,6 +1,6 @@
 import classes from "./Inputs.module.scss";
 
-const Inputs = () => {
+const Inputs = (props) => {
 
     return (
         <>
