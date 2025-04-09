@@ -26,24 +26,29 @@ function timer(timeTest) {
 }
 
 const timeCount = (timeValue) => {
-  
-  return (
-  `${Math.trunc(timeValue / 3600)} ч. ${Math.trunc(
-    timeValue / 60
-  )} м. ${timeValue > 59 ? timeValue % 60 : timeValue} сек.`)
-}
-
-
+  return `${Math.trunc(timeValue / 3600)} ч. ${Math.trunc(timeValue / 60)} м. ${
+    timeValue > 59 ? timeValue % 60 : timeValue
+  } сек.`;
+};
 
 const Header = () => {
-
-  const [timeShow, setTimeShow] = useState(<Inputs props = {{value : 20}}/>);
+  const [userName, setUserName] = useState();
+  const [timeShow, setTimeShow] = useState();
 
   return (
     <header>
-      <img style={{ width: "20%" }} src={Logo} onClick={() => setTimeShow(timeCount(timeShow.value))}/>
-      <Inputs />
-      <div>{timeShow}</div>
+      <img
+        style={{ width: "20%" }}
+        src={Logo}
+        onClick={() =>{ 
+          // setTimeShow(timeCount(timeShow.placeStart));
+          // setUserName(timeShow);
+          console.log(userName);}
+        }
+      />
+      <Inputs placeStart={"ФИО"} />
+      {/* <div>{timeShow}</div> */}
+      <input type="text" onChange={(e) => setUserName(e)} />
     </header>
   );
 };
